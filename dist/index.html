@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/assets/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Imagica Holidays – Explore tours, hotels, and holiday packages. Book your dream vacation today." />
+    <title>Imagica Holidays</title>
+
+    <!-- Critical inline CSS for the pre-loader so it renders before React hydrates -->
+    <style>
+      *,*::before,*::after{box-sizing:border-box}
+      body{margin:0;font-family:system-ui,sans-serif}
+      #site-loader{
+        position:fixed;inset:0;z-index:9999;
+        background:#ffffff;
+        display:flex;flex-direction:column;
+        align-items:center;justify-content:center;
+        transition:opacity .4s ease,visibility .4s ease;
+      }
+      #site-loader.hidden{opacity:0;visibility:hidden;pointer-events:none}
+      .loader-logo{width:80px;margin-bottom:24px}
+      .loader-spinner{
+        width:48px;height:48px;
+        border:4px solid #e2e8f0;
+        border-top-color:#2F6F5E;
+        border-radius:50%;
+        animation:_spin .8s linear infinite;
+      }
+      .loader-tagline{
+        margin-top:16px;
+        font-size:14px;color:#6b7280;letter-spacing:.5px;
+      }
+      @keyframes _spin{to{transform:rotate(360deg)}}
+    </style>
+    <script type="module" crossorigin src="/assets/index-DLKTWc1w.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-B7sAUl2s.css">
+  </head>
+  <body>
+
+    <!-- Pre-loader: visible immediately while React and assets load -->
+    <div id="site-loader" role="status" aria-label="Loading Imagica Holidays">
+      <img class="loader-logo" src="/assets/logo.png" alt="Imagica Holidays logo" onerror="this.style.display='none'" />
+      <div class="loader-spinner"></div>
+      <p class="loader-tagline">Imagica Holidays</p>
+    </div>
+
+    <div id="root"></div>
+  </body>
+</html>

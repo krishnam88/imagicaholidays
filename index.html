@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Imagica Holidays - Your trusted travel partner for unforgettable experiences" />
+    <title>Imagica Holidays</title>
+    <style>
+      #site-loader {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #ffffff;
+        transition: opacity 0.5s ease, visibility 0.5s ease;
+      }
+      #site-loader.hidden {
+        opacity: 0;
+        visibility: hidden;
+      }
+      .loader-spinner {
+        width: 56px;
+        height: 56px;
+        border: 5px solid #e5e7eb;
+        border-top-color: #2F6F5E;
+        border-radius: 50%;
+        animation: spin 0.9s linear infinite;
+      }
+      .loader-brand {
+        margin-top: 18px;
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #2F6F5E;
+        letter-spacing: 0.05em;
+        font-family: system-ui, sans-serif;
+      }
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="site-loader">
+      <div class="loader-spinner"></div>
+      <div class="loader-brand">Imagica Holidays</div>
+    </div>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

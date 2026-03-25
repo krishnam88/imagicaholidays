@@ -5,7 +5,7 @@ import { Loader2, Send } from 'lucide-react';
 
 const leadSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
-  phone: z.string().regex(/^\+?\d{10,15}$/, 'Enter a valid 10–15 digit phone number'),
+  phone: z.string().regex(/^\+?\d{10,15}$/, 'Enter a valid phone number (10–15 digits, optionally starting with +)'),
   email: z.string().email('Enter a valid email').optional().or(z.literal('')),
   destination: z.string().optional(),
   message: z.string().optional(),

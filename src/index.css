@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #2F6F5E;
+  --color-primary-light: #3d8f77;
+  --color-primary-dark: #245548;
+  --color-secondary: #F5A623;
+  --font-family-sans: 'Inter', system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-white text-gray-800 font-sans;
+  }
+  * {
+    @apply box-border;
+  }
+}
